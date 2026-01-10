@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Modern Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="game-container">
+        <div id="sidebar-left" class="sidebar">
+            <div class="panel">
+                <h3>HOLD</h3>
+                <canvas id="hold-canvas"></canvas>
+            </div>
+            <div class="panel info">
+                <div>SCORE<br><span id="score">0</span></div>
+                <div>LEVEL<br><span id="level">1</span></div>
+                <div>LINES<br><span id="lines">0</span></div>
+            </div>
+        </div>
+
+        <div id="main-board">
+            <canvas id="tetris-canvas"></canvas>
+            <div id="overlay" class="hidden">
+                <div id="game-over-msg">GAME OVER</div>
+                <button id="restart-btn">RESTART</button>
+            </div>
+        </div>
+
+        <div id="sidebar-right" class="sidebar">
+            <div class="panel">
+                <h3>NEXT</h3>
+                <canvas id="next-canvas"></canvas>
+            </div>
+            <div class="panel ai-panel">
+                <button id="ai-toggle">AI MODE: OFF</button>
+            </div>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div id="mobile-controls">
+            <div class="control-row">
+                <button id="btn-hold" class="ctrl-btn secondary">HOLD</button>
+                <button id="btn-up" class="ctrl-btn">ROTATE</button>
+                <button id="btn-drop" class="ctrl-btn secondary">DROP</button>
+            </div>
+            <div class="control-row">
+                <button id="btn-left" class="ctrl-btn">LEFT</button>
+                <button id="btn-down" class="ctrl-btn">DOWN</button>
+                <button id="btn-right" class="ctrl-btn">RIGHT</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "nipplejs": "https://esm.sh/nipplejs@0.10.1"
+      }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
